@@ -117,14 +117,14 @@ auto genDefaultOps(){
     return ops;
 }
 
-auto genOps(float x){
+auto genOps(int x){
     auto ops=genDefaultOps();
     ops.emplace( "%", unpackPair(Operations::Int::mod) );
     ops.emplace( "!", unpackSingle(Operations::Int::fac) );
     return ops;
 }
 
-auto genOps(int x){
+auto genOps(float x){
     auto ops=genDefaultOps();
     ops.emplace( "%", unpackPair(Operations::Float::fmod) );
     ops.emplace( "cos", unpackSingle(Operations::Float::cos) );
@@ -138,6 +138,7 @@ auto genOps(bool x){
         {"+", unpackPair(Operations::Bool::add)},
         {"*", unpackPair(Operations::Bool::mul)},
         {"!", unpackSingle(Operations::Bool::neg)},
+        {"not", unpackSingle(Operations::Bool::neg)},
         {"p", unpackSingleV(Operations::Numeric::print)}
     });
     return ops;
