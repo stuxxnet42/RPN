@@ -3,16 +3,13 @@
 
 
 int main(int argc, char** argv) { //TODO cleanup main.
-    op_t typeProxy;
+    op_t typeProxy=float(0);
     if(argc==2){
         if(argv[1][0] == 'i'){
             typeProxy=int(0);
         }
         else if(argv[1][0] == 'b'){
             typeProxy=bool(0);
-        }
-        else{
-            typeProxy=float(0);
         }
     }
     
