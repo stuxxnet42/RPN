@@ -1,7 +1,11 @@
 # RPN
-a functional RPN calculator
+a functional reverse polish notation calculator
+
+
+compile with -std=c++17
 
 usage is:
+
 echo "$SomeCalculation" | ./rpn {$mode}
 
 where $mode is either 'i' for int, 'b' for bool or empty for float
