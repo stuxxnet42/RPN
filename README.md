@@ -18,7 +18,7 @@ example:
 
 
 
-% echo "1 0 + 0 * not"  | ./a.out b
+% echo "1 0 + 0 * not"  | ./a.rpn b
 
 1
 
